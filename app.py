@@ -26,7 +26,7 @@ alcohol = go.Bar(
 beer_data = [bitterness, alcohol]
 beer_layout = go.Layout(
     barmode='group',
-    title = 'Beer Comparison'
+    title = 'A Different Beer Comparison'
 )
 
 beer_fig = go.Figure(data=beer_data, layout=beer_layout)
@@ -37,7 +37,7 @@ app = dash.Dash()
 server = app.server
 
 app.layout = html.Div(children=[
-    html.H1('Flying Dog Beers'),
+    html.H1('Examples of Troegs Beers'),
     dcc.Graph(
         id='flyingdog',
         figure=beer_fig
